@@ -7,7 +7,8 @@ import PustakaBaru from './components/kelola_data/BahanPustakaBaru';
 import Data from './components/kelola_data/Data';
 import Pemberitahuan from './components/pages/Pemberitahuan';
 import Perpus from './components/pages/Perpus';
-import SignUp from './components/pages/SignUp';
+import Login from './components/pages/Login';
+import Buku from './components/bahan_pustaka/Buku.js';
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
           <Route path='/data' component={Data} />
           <Route path='/pemberitahuan' component={Pemberitahuan} />
           <Route path='/perpus' component={Perpus} />
-          <Route path='/sign-up' component={SignUp} />
+          <Route path='/login' component={Login} />
+          <Route path='/buku' component={Buku} />
         </Switch>
       </Router>
     </>

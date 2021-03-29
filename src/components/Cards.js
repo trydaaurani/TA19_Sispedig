@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Cards.css';
 import CardItem from './CardItem';
 import { Link } from 'react-router-dom';
+import { IconButton } from "@chakra-ui/react"
 
 function Cards() {
   const [click, setClick] = useState(false);

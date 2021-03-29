@@ -6,6 +6,8 @@ import Dropdown from './Dropdown/Dropdown';
 import Dropdown2 from './Dropdown/Dropdown2';
 import Dropdown3 from './Dropdown/Dropdown3';
 import Dropdown4 from './Dropdown/Dropdown4';
+import CardItem from './CardItem';
+import Cards from './Cards';
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -49,18 +51,13 @@ function Navbar() {
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
               <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-                <img src="/images/logo.JPG" width="200" height="75" />
+                <img src="/images/logo.JPG" width="200" height="75"/>
               </Link>
             </li>
             <li className='nav-item'>
-              <div>ONLINE LIBRARY INFORMATION SYSTEM INSTITUT TEKNOLOGI DEL
-                <img src="/images/logo-del.jpeg" width="50" height="50"/>
-              </div>
+              <Link to='/login' className='nav-links-mobile' onClick={closeMobileMenu}>Login</Link>
             </li>
-            <li className='nav-item'>
-              <Link to='/sign-up' className='nav-links-mobile' onClick={closeMobileMenu}>Sign Up</Link>
-            </li>
-            {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+            {button && <Button buttonStyle='btn--outline'>LOGIN</Button>}
           </ul>
         </div>
       </nav>
@@ -72,11 +69,11 @@ function Navbar() {
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
-              <Link to='/home' className='nav-links' onClick={closeMobileMenu}> BERANDA </Link>
+              <Link to='/home' className='nav-links' onClick={closeMobileMenu}> BERANDA</Link>
             </li>
 
             <li className='nav-item' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-              <Link to='/bahanpustakabaru' className='nav-links' onClick={closeMobileMenu}> BAHAN PUSTAKA <i className='fas fa-caret-down'/> </Link>
+              <div to='/bahanpustakabaru' className='nav-links' onClick={closeMobileMenu}> BAHAN PUSTAKA <i className='fas fa-caret-down'/> </div>
               {dropdown && <Dropdown />}
 
             </li>
